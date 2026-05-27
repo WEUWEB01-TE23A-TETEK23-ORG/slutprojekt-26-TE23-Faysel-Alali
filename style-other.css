@@ -1,0 +1,63 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "main_area aside_area"
+    "footer_area footer_area";
+}
+
+
+
+header {
+    /* Att lägga till en backgrundsbild med färg, filter */
+    /* Hämtad och redigerad från: https://stackoverflow.com/questions/26621513/darken-css-background-image */
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/portfolio-slut-projekt/pictures/studies_NTIVetenskap_1.jpg");
+    padding: 10rem 3rem;
+    text-align: center;
+    width: 60rem;
+    margin: auto;
+    color: azure;
+}
+
+header h1 {
+    font-size: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+main {
+    grid-area: main_area;
+}
+
+.figures_container {
+    display: flex;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "figure_img_area figure_figcatpition_area";
+}
+
+figure img {
+    grid-area: figure_img_area;
+}
+
+figure figcaption {
+    grid-area: figure_figcatpition_area;
+}
+
+aside {
+    grid-area: aside_area;
+    padding: 2.5rem 0.3rem;
+    text-align: right;
+}
+
+footer {
+    grid-area: footer_area;
+}

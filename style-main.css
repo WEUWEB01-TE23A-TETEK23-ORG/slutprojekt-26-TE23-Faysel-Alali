@@ -1,0 +1,527 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    text-decoration: none;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+/* Färg Palet */
+:root{
+    --blickishhh: #444444;
+    --bluishhh: #134287;
+    --backgroundishhh: #EEEEEE; 
+}
+
+
+/* ---------------------------- Fonts -------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+/* ------------------- Container And Constents ------------------------*/
+
+body {
+    background-color: var(--backgroundishhh);
+    font-family: "Google Sans", sans-serif;
+    /* display: flex;
+    align-items: center; */
+}
+
+.container   {
+    background-color: rgb(255, 255, 255);
+    width: 60rem;
+    margin: auto;
+    padding: 0 2rem;
+
+}
+
+h1, h2 {
+    font-family: "Boogaloo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* ------------------- Animated background ------------------------*/
+/* Copied and edited from: https://reactbits.dev/animations/magnet-lines? */
+
+.magnetLines_container {
+    position: fixed;
+
+    top: 50%;
+    left: -0.5%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+
+    justify-items: center;
+    align-items: center;
+
+    /* Att den ritas längre back, andra eliment har z-index = 0 */
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.magnetLines_container span {
+    display: block;
+
+    transform-origin: center;
+
+    will-change: transform;
+
+    transform: rotate(var(--rotate));
+}
+  
+
+
+/* ------------------- Navigation Bar ------------------------*/
+
+#navbar {
+    font-family: calibri;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+
+    /* Att den ritas längst fram, andra eliment har z-index = 0 */
+    z-index: 1;
+}
+
+#navbar .navdiv{
+    background-color: white;
+    width: 60rem;
+    margin: auto;
+
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+#navbar .navdiv .logo a {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--blickishhh);
+}
+
+#navbar .navdiv ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    list-style: none;
+}
+
+
+#navbar .navdiv ul li a {
+    color: var(--blickishhh);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 2.5rem;
+    transition: 0.3s;
+}
+
+#navbar .navdiv ul li a:hover {
+    font-size: 1.7rem;
+    text-decoration: underline;
+}
+
+/* ------------------ Menu Button Looks & Animation ------------------------*/
+
+.menu_btn {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .menu_btn:hover .bar1, .menu_btn:hover .bar2, .menu_btn:hover .bar3 {
+    background-color: #871b1b;
+    width: 40px;
+    height: 5px;
+  }
+
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+
+/* ------------------------- Side Bar -------------------------------*/
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--blickishhh);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+    font-size: 1.8rem;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 4rem;
+    margin-left: 50px;
+  }
+
+  .sidebar .closebtn:hover {
+    font-size: 4.3rem;
+    color: f1f1f1;
+  }
+
+
+/* ------------------- Hero About Section ------------------------*/
+
+.container .hero_section {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "hero_text_area hero_image_area";
+}
+
+.container .hero_section .hero_text {
+    padding-right: 2rem;
+    flex-wrap: wrap;
+    align-content: center;
+    grid-area: hero_text_area;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.container .hero_section .hero_text h1 {
+    font-size: 5rem;
+    padding-bottom: 2rem;
+}
+
+.container .hero_section .hero_text p {
+    font-size: 1.5rem;
+}
+
+.container .hero_section .hero_image {
+    grid-area: hero_image_area;
+}
+
+/* ------------------- Section-information Boxes ------------------------*/
+
+.section_info_box {
+    text-align: center;
+    padding: 2rem 3rem;
+    padding-bottom: 4rem;
+}
+
+.section_info_box p {
+    font-size: 1.5rem;
+}
+
+
+/* ------------------- Defoult Columns ------------------------*/
+
+.container .columns{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.container .columns .column {
+    border-radius: 5px;
+    border: 3px solid var(--blickishhh);
+    transition: 0.2s;
+}
+
+
+.container .columns .column h3, .container .columns .column p{
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.container .columns .column:hover h3, .container .columns .column:hover a {
+    text-decoration: underline;
+}
+
+.container .columns .column a {
+    /* Neathor of the solitions below is worikng to stick the element to the bootom of the div */
+    /* 
+    display: flex;
+    align-items: flex-end; 
+-------------------------------------
+    position: absolute;
+    bottom: 0px; 
+    */
+
+
+    font-size: 1.35rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+
+
+/* ------------------- Studies Section ------------------------*/
+
+.container .studies_section .columns .column:hover {
+    box-shadow: 0 10px 10px #e2e2e2;
+    
+}
+
+.container .studies_section .columns .column img {
+    border-radius: 1px 1px 0px 0px;
+}
+
+
+/* ------------------- Job Experience Section ------------------------*/
+
+.container .job_experince_section {}
+
+.container .job_experince_section .columns .column img {
+    padding: 15px 0px 0px 15px;
+    width: 60px;
+    transition: width 0.2s;
+}
+
+.container .job_experince_section .columns .column:hover img {
+    width: 90px;
+}
+
+/* ------------------- Job Experience Section 2 ------------------------*/
+
+.container .projekts_sextion {}
+
+.container .projekts_sextion .columns .column {
+    background-size: cover;
+    height: 20rem;
+}
+
+/* ------------------- Job Experience Section GAllarey ------------------------*/
+
+.container .projekts_section {}
+
+.container .projekts_section .galeri {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.container .projekts_section .galeri .column {
+    -ms-flex: 33.33%; /* IE10 */
+    flex: 33.33;
+    max-width: 33.33%;
+}
+
+.container .projekts_section .galeri .column img {
+    /* adkjashdkjhaskjdhaksj behövs ej kanske (/raden under) */
+    display: block; 
+    margin-top: 1rem;
+    vertical-align: middle;
+}
+
+
+/* ------------------- Overlay Animation ------------------------*/
+
+.overlay_container {
+    position: relative;
+}
+  
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1d1d1dd3;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.3s ease;
+  }
+
+  .overlay_container:hover .overlay {
+    height: 100%;
+  }
+
+  .text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+
+  /* -------------------------- Contact Form -------------------------------*/
+  /* Copied and edited from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form */
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .conatct_form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px 20px;
+    margin: 2rem 6rem;
+  }
+
+  /* -Complex Submit-button animation for contact form- */
+  /* Copied and edited from: https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+  
+  .submit_btn {
+    border-radius: 5px;
+    background-color: var(--blickishhh);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .submit_btn a {
+    color: white;
+  }
+  
+
+  .submit_btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .submit_btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .submit_btn:hover span {
+    padding-right: 2rem;
+  }
+  
+  .submit_btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+/* ------------------- Footer -------------------------------- */
+
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.7rem;
+    margin-top: 5rem;
+}
+
+.footer_top h2 {
+    font-size: 1.7rem;
+    padding: 0;
+}
+
+.social_panel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 1.7rem;
+}
+
+.social_panel a {
+    color: var(--blickishhh);
+    font-size: 1.7rem;
+    transition: 0.3s;
+}
+
+.social_panel a:hover {
+    transform: translateY(-15px);
+    font-size: 2.5rem;
+    color: rgb(255, 0, 0);
+}
+
+.footer_bottom {
+    margin-top: 2rem;
+    border-top: 1px solid var(--blickishhh);
+    padding-top: 15px;
+    text-align: center;
+}
+
+.footer_bottom p {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 0.8rem;
+}
