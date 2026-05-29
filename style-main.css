@@ -519,6 +519,16 @@ a {
 }
 
 
+/* Annars börjar meny knapparna krympa på varandra  */
+@media (max-width: 1053px) {
+    /* Blir av med meny klnapparna */
+    #navbar .navdiv ul {
+        display: none;
+    }
+}
+
+
+
 
 /* ----------------------------------- mobiler ---------------------------------------------- */
 
@@ -529,10 +539,10 @@ a {
         padding: 1rem;
     }
 
-    /* Blir av med meny klnapparna */
-    #navbar .navdiv ul {
+    /* Tidigare gjord, ej behöver upprepas */
+    /* #navbar .navdiv ul {
         display: none;
-    }
+    } */
 
 
 
@@ -567,13 +577,21 @@ a {
         max-width: 100%;
     }
 
-    /* Ej fungerar, många iterationer testade */
-    .conatct_form {
-        margin: 2rem 1rem;
+    input[type=text], select, textarea {
+        /* Valen inom 'selekt' rutorna blir gigantiska, även vid övergång till enheten pixlar */
+        font-size: 2.5rem;
     }
+    .conatct_form {
+        font-size: 3rem;
+    }
+
 
     .footer_top h2 {
         font-size: 1.3rem;
+    }
+
+    .footer_top .social_panel {
+        display: none;
     }
 
 }
