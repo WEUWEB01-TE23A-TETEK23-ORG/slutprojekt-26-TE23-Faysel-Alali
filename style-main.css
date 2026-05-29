@@ -519,6 +519,8 @@ a {
 }
 
 
+/* ------------------------------------- För responivitet -------------------------------------------------------------- */
+
 /* Annars börjar meny knapparna krympa på varandra  */
 @media (max-width: 1053px) {
     /* Blir av med meny klnapparna */
@@ -528,6 +530,53 @@ a {
 }
 
 
+
+
+
+
+/* -------------------------------------------------- läsplatta --------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Navbar */
+    #navbar .navdiv {
+        padding: 1rem;
+    }
+
+    /* Att alla grids blir enkylda kolumner staplade på varandra */
+    .container .columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container .projekts_section .galeri .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    input[type=text], select, textarea {
+        /* Valen inom 'selekt' rutorna blir gigantiska, även vid övergång till enheten pixlar */
+        font-size: 1.5rem;
+    }
+    .conatct_form {
+        font-size: 2rem;
+        margin: 0 0 ;
+    }
+    .submit_btn {
+
+        /* Font-size not worknig */
+        font-size: 1.5rem; 
+    }
+
+
+    .footer_top h2 {
+        font-size: 1.3rem;
+    }
+
+    .footer_top .social_panel {
+        display: none;
+    }
+    
+
+}
 
 
 /* ----------------------------------- mobiler ---------------------------------------------- */
@@ -583,6 +632,11 @@ a {
     }
     .conatct_form {
         font-size: 3rem;
+    }
+    .submit_btn {
+
+        /* Font-size not worknig */
+        font-size: 2.5rem; 
     }
 
 
