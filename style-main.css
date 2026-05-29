@@ -38,7 +38,12 @@ body {
 
 .container   {
     background-color: rgb(255, 255, 255);
-    width: 60rem;
+
+    /* När för att kontainer storleken altid ska passa sig till skärmstorlekar mindre än 60 rem, detta gör att alla dess barn som använder sig av 'rem' enheten kommer att passa sig till det. */
+    max-width: 60rem;
+    width: 100%;
+
+
     margin: auto;
     padding: 0 2rem;
 
@@ -124,7 +129,8 @@ a {
 
 #navbar .navdiv{
     background-color: white;
-    width: 60rem;
+    max-width: 60rem;
+    width: 100%;
     margin: auto;
 
     display: flex; 
@@ -552,29 +558,13 @@ a {
         max-width: 100%;
     }
 
-    input[type=text], select, textarea {
-        /* Valen inom 'selekt' rutorna blir gigantiska, även vid övergång till enheten pixlar */
-        font-size: 1.5rem;
-    }
     .conatct_form {
-        font-size: 2rem;
         margin: 0 0 ;
-    }
-    .submit_btn {
-
-        /* Font-size not worknig */
-        font-size: 1.5rem; 
-    }
-
-
-    .footer_top h2 {
-        font-size: 1.3rem;
     }
 
     .footer_top .social_panel {
         display: none;
     }
-    
 
 }
 
@@ -588,34 +578,6 @@ a {
         padding: 1rem;
     }
 
-    /* Tidigare gjord, ej behöver upprepas */
-    /* #navbar .navdiv ul {
-        display: none;
-    } */
-
-
-
-    h1 {
-        font-size: 5rem;
-    }
-
-    h2 {
-        font-size: 5rem;
-    }
-
-    h3 {
-        font-size: 3rem;
-    }
-
-    p {
-        font-size: 2.5rem;
-    }
-
-    a {
-        font-size: 3.5rem;
-    }
-
-
     /* Att alla grids blir enkylda kolumner staplade på varandra */
     .container .columns {
         grid-template-columns: 1fr;
@@ -624,28 +586,6 @@ a {
     .container .projekts_section .galeri .column {
         flex: 100%;
         max-width: 100%;
-    }
-
-    input[type=text], select, textarea {
-        /* Valen inom 'selekt' rutorna blir gigantiska, även vid övergång till enheten pixlar */
-        font-size: 2.5rem;
-    }
-    .conatct_form {
-        font-size: 3rem;
-    }
-    .submit_btn {
-
-        /* Font-size not worknig */
-        font-size: 2.5rem; 
-    }
-
-
-    .footer_top h2 {
-        font-size: 1.3rem;
-    }
-
-    .footer_top .social_panel {
-        display: none;
     }
 
 }
