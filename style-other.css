@@ -1,23 +1,31 @@
-
 .container {
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-areas: 
+    "seperator_area seperator_area"
     "main_area aside_area"
     "footer_area footer_area";
 }
 
 
+.seperator{
+    padding-bottom: 30px;
+    grid-area: seperator_area;
+}
 
 header {
     /* Att lägga till en backgrundsbild med färg, filter */
     /* Hämtad och redigerad från: https://stackoverflow.com/questions/26621513/darken-css-background-image */
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/portfolio-slut-projekt/pictures/studies_NTIVetenskap_1.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/pictures/big_brain_you_head_1.png");
+
+    background-size: cover;
+
     padding: 10rem 3rem;
     text-align: center;
     width: 60rem;
     margin: auto;
     color: azure;
+    margin-top: 2rem;
 }
 
 header h1 {
@@ -35,17 +43,18 @@ main {
 
 .figures_container {
     display: flex;
+    justify-content: space-between;
 }
 
 figure {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "figure_img_area figure_figcatpition_area";
+    background-color: aquamarine;
+    display: flex;
+    margin: 0;
 }
 
 figure img {
     grid-area: figure_img_area;
+    width: 170px;
 }
 
 figure figcaption {
