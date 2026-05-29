@@ -50,6 +50,10 @@ h1, h2 {
     font-style: normal;
 }
 
+h1 {
+    font-size: 5rem;
+}
+
 h2 {
     font-size: 3rem;
     padding-bottom: 1.5rem;
@@ -61,6 +65,10 @@ h3 {
 
 p {
     font-size: 1.2rem;
+}
+
+a {
+    font-size: 1.35rem;
 }
 
 /* ------------------- Animated background ------------------------*/
@@ -250,12 +258,7 @@ p {
 }
 
 .container .hero_section .hero_text h1 {
-    font-size: 5rem;
     padding-bottom: 2rem;
-}
-
-.container .hero_section .hero_text p {
-    font-size: 1.5rem;
 }
 
 .container .hero_section .hero_image {
@@ -268,10 +271,6 @@ p {
     text-align: center;
     padding: 2rem 3rem;
     padding-bottom: 4rem;
-}
-
-.section_info_box p {
-    font-size: 1.5rem;
 }
 
 
@@ -309,8 +308,6 @@ p {
     bottom: 0px; 
     */
 
-
-    font-size: 1.35rem;
     padding: 1rem 1rem 0 1rem;
 }
 
@@ -403,7 +400,6 @@ p {
   .text {
     white-space: nowrap; 
     color: white;
-    font-size: 20px;
     position: absolute;
     overflow: hidden;
     top: 50%;
@@ -487,10 +483,7 @@ p {
     margin-top: 5rem;
 }
 
-.footer_top h2 {
-    font-size: 1.7rem;
-    padding: 0;
-}
+
 
 .social_panel {
     position: absolute;
@@ -503,7 +496,6 @@ p {
 
 .social_panel a {
     color: var(--blickishhh);
-    font-size: 1.7rem;
     transition: 0.3s;
 }
 
@@ -522,7 +514,7 @@ p {
 
 .footer_bottom p {
     color: gray;
-    font-size: 14px;
+    font-size: 1rem;
     margin-bottom: 0.8rem;
 }
 
@@ -552,8 +544,16 @@ p {
         font-size: 5rem;
     }
 
+    h3 {
+        font-size: 3rem;
+    }
+
     p {
         font-size: 2.5rem;
+    }
+
+    a {
+        font-size: 3.5rem;
     }
 
 
