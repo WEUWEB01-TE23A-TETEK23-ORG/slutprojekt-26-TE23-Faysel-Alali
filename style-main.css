@@ -525,3 +525,55 @@ p {
     font-size: 14px;
     margin-bottom: 0.8rem;
 }
+
+
+
+/* ----------------------------------- mobiler ---------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    /* Navbar */
+    #navbar .navdiv {
+        padding: 1rem;
+    }
+
+    /* Blir av med meny klnapparna */
+    #navbar .navdiv ul {
+        display: none;
+    }
+
+
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 2.5rem;
+    }
+
+
+    /* Att alla grids blir enkylda kolumner staplade på varandra */
+    .container .columns {
+        grid-template-columns: 1fr;
+    }
+
+    .container .projekts_section .galeri .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    /* Ej fungerar, många iterationer testade */
+    .conatct_form {
+        margin: 2rem 1rem;
+    }
+
+    .footer_top h2 {
+        font-size: 1.3rem;
+    }
+
+}
